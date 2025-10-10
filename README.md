@@ -3,7 +3,7 @@
 [![Docker Image](https://ghcr-badge.egpl.dev/pharmaverse/docker_pharmaverse/latest_tag?trim=major&label=latest)](https://github.com/pharmaverse/docker_pharmaverse/pkgs/container/docker_pharmaverse)
 [![Docker Image Size](https://ghcr-badge.egpl.dev/pharmaverse/docker_pharmaverse/size)](https://github.com/pharmaverse/docker_pharmaverse/pkgs/container/docker_pharmaverse)
 [![R Version](https://img.shields.io/badge/R-4.5.1-blue.svg)](https://www.r-project.org/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-in%20development-orange.svg)](https://github.com/pharmaverse/docker_pharmaverse)
 
 > ⚠️ **DEVELOPMENT STATUS**: This project is currently in active development. Features and APIs may change.
