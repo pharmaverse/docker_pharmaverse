@@ -60,7 +60,7 @@ docker run -d \
   -p 8787:8787 \
   -e PASSWORD=yourpassword \
   -v $(pwd):/home/rstudio/workspace \
-  ghcr.io/pharmaverse/docker_pharmaverse:v1.0.0
+  ghcr.io/pharmaverse/docker_pharmaverse:v4.5.1
 ```
 
 Access at: **http://localhost:8787**
@@ -71,29 +71,7 @@ Access at: **http://localhost:8787**
 ### 3. Run R in Terminal
 
 ```bash
-docker run -it --rm ghcr.io/pharmaverse/docker_pharmaverse:v1.0.0 R
-```
-
-### 4. Use with Docker Compose
-
-Create `docker-compose.yml`:
-
-```yaml
-version: '3.8'
-services:
-  rstudio:
-    image: ghcr.io/pharmaverse/docker_pharmaverse:v1.0.0
-    ports:
-      - "8787:8787"
-    environment:
-      - PASSWORD=yourpassword
-    volumes:
-      - ./workspace:/home/rstudio/workspace
-```
-
-Run:
-```bash
-docker-compose up -d
+docker run -it --rm ghcr.io/pharmaverse/docker_pharmaverse:v4.5.1
 ```
 
 ---

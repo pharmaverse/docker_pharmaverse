@@ -8,7 +8,7 @@ Thank you for your interest in contributing to this project!
 
 To add new pharmaverse packages to the Docker image:
 
-1. Edit the `Dockerfile`
+1. Edit the `Dockerfile` - e.g. R version, add new packages. Look for previous r version to know where to change it.
 2. Add the package name to the `install.packages()` call
 3. Also add it to the verification step
 4. Update the README.md with the new package name
