@@ -1,0 +1,61 @@
+{
+  "name": "Pharmaverse R Development",
+  
+  // Use pre-built image from GitHub Container Registry
+  // Image will be automatically pulled from ghcr.io/<org>/<repo>:latest
+  "image": "ghcr.io/pharmaverse/docker_pharmaverse:latest",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "r.bracketedPaste": true,
+        "r.plot.useHttpgd": true,
+        "r.rterm.linux": "/usr/local/bin/R",
+        "r.rpath.linux": "/usr/local/bin/R",
+        "r.lsp.enabled": true,
+        "r.lsp.debug": false,
+        "r.alwaysUseActiveTerminal": true,
+        "r.sessionWatcher": true,
+        "r.rtermSendDelay": 0,
+        "[r]": {
+          "editor.defaultFormatter": "REditorSupport.r",
+          "editor.tabSize": 2,
+          "editor.formatOnSave": false
+        },
+        "files.associations": {
+          "*.R": "r",
+          "*.Rmd": "rmd"
+        },
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "REditorSupport.r",
+        "REditorSupport.r-debugger",
+        "quarto.quarto",
+        "RDebugger.r-debugger",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ikuyadeu.r-pack"
+      ]
+    }
+  },
+
+  "forwardPorts": [8787],
+  "portsAttributes": {
+    "8787": {
+      "label": "RStudio Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "postCreateCommand": "R -e \"install.packages('languageserver', repos='https://cloud.r-project.org/')\"",
+
+  "remoteUser": "rstudio",
+  
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}"
+}
