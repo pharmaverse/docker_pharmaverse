@@ -33,7 +33,7 @@ WORKDIR /home/rstudio
 
 # Install pharmaverse packages using install2.r
 # This script is included in the rocker image and handles system dependencies
-RUN install2.r --error --skipinstalled -n -1 \
+RUN install2.r --error --skipinstalled -n -2 \
     admiral \
     admiralmetabolic \
     admiralneuro \
