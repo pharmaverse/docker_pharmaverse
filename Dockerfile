@@ -28,6 +28,8 @@ LABEL org.opencontainers.image.description="R environment with tidyverse and pha
 # Set R version for documentation
 ENV R_VERSION=4.5.1
 
+ENV CRAN=https://p3m.dev/cran/__linux__/noble/latest
+
 # Set working directory
 WORKDIR /home/rstudio
 
