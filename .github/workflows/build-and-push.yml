@@ -83,6 +83,7 @@ jobs:
           cache-to: ${{ !startsWith(github.ref, 'refs/tags/v') && 'type=gha,mode=max' || '' }}
           platforms: ${{ startsWith(github.ref, 'refs/tags/v') && 'linux/amd64,linux/arm64' || 'linux/amd64' }}
           provenance: false
+          no-cache: ${{ startsWith(github.ref, 'refs/tags/v') }}
           build-args: |
             BUILD_DATE=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.created'] }}
             VCS_REF=${{ github.sha }}
